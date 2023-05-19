@@ -1,0 +1,1602 @@
+[
+    {
+        "food_name": "hot dog",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            14.09,
+            1.28,
+            0,
+            5.61,
+            0.61
+        ],
+        "serving_weight_grams": 48,
+        "nf_calories": 154.56,
+        "id": "0"
+    },
+    {
+        "food_name": "apple",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.31,
+            25.13,
+            4.37,
+            0.47,
+            18.91
+        ],
+        "serving_weight_grams": 182,
+        "nf_calories": 94.64,
+        "id": "1"
+    },
+    {
+        "food_name": "artichoke",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.41,
+            14.34,
+            6.84,
+            3.47,
+            1.19
+        ],
+        "serving_weight_grams": 120,
+        "nf_calories": 63.6,
+        "id": "2"
+    },
+    {
+        "food_name": "asparagus",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.17,
+            3.08,
+            1.5,
+            1.8,
+            0.98
+        ],
+        "serving_weight_grams": 75,
+        "nf_calories": 16.5,
+        "id": "3"
+    },
+    {
+        "food_name": "bagel",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.39,
+            55,
+            1.68,
+            11.09,
+            8.85
+        ],
+        "serving_weight_grams": 105,
+        "nf_calories": 277.2,
+        "id": "4"
+    },
+    {
+        "food_name": "pie",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            13.75,
+            42.5,
+            2,
+            2.38,
+            19.56
+        ],
+        "serving_weight_grams": 125,
+        "nf_calories": 296.25,
+        "id": "5"
+    },
+    {
+        "food_name": "banana",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.39,
+            26.95,
+            3.07,
+            1.29,
+            14.43
+        ],
+        "serving_weight_grams": 118,
+        "nf_calories": 105.02,
+        "id": "6"
+    },
+    {
+        "food_name": "beer",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0,
+            12.64,
+            0,
+            1.64,
+            0
+        ],
+        "serving_weight_grams": 356,
+        "nf_calories": 153.08,
+        "id": "7"
+    },
+    {
+        "food_name": "bell pepper",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.23,
+            7.49,
+            1.25,
+            1.08,
+            2.88
+        ],
+        "serving_weight_grams": 114,
+        "nf_calories": 31.54,
+        "id": "8"
+    },
+    {
+        "food_name": "bread",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.97,
+            14.33,
+            0.78,
+            2.57,
+            1.64
+        ],
+        "serving_weight_grams": 29,
+        "nf_calories": 77.14,
+        "id": "9"
+    },
+    {
+        "food_name": "broccoli",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.04,
+            0.72,
+            0.33,
+            0.24,
+            0.14
+        ],
+        "serving_weight_grams": 10,
+        "nf_calories": 3.5,
+        "id": "10"
+    },
+    {
+        "food_name": "burrito",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            16.39,
+            56.32,
+            8.92,
+            16.94,
+            5.06
+        ],
+        "serving_weight_grams": 241,
+        "nf_calories": 433.8,
+        "id": "11"
+    },
+    {
+        "food_name": "cabbage",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.05,
+            4.13,
+            1.43,
+            0.95,
+            2.09
+        ],
+        "serving_weight_grams": 75,
+        "nf_calories": 17.25,
+        "id": "12"
+    },
+    {
+        "food_name": "cake",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            12,
+            37.65,
+            0.2,
+            2,
+            28
+        ],
+        "serving_weight_grams": 67,
+        "nf_calories": 261.97,
+        "id": "13"
+    },
+    {
+        "food_name": "candy",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.01,
+            5.88,
+            0,
+            0,
+            3.77
+        ],
+        "serving_weight_grams": 6,
+        "nf_calories": 23.64,
+        "id": "14"
+    },
+    {
+        "food_name": "cantaloupe",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.05,
+            45.04,
+            4.97,
+            4.64,
+            43.39
+        ],
+        "serving_weight_grams": 552,
+        "nf_calories": 187.68,
+        "id": "15"
+    },
+    {
+        "food_name": "carrot",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.08,
+            3.78,
+            1.38,
+            0.35,
+            1.59
+        ],
+        "serving_weight_grams": 46,
+        "nf_calories": 16.1,
+        "id": "16"
+    },
+    {
+        "food_name": "fresh fig",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.15,
+            9.59,
+            1.45,
+            0.38,
+            8.13
+        ],
+        "serving_weight_grams": 50,
+        "nf_calories": 37,
+        "id": "17"
+    },
+    {
+        "food_name": "cookie",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            7.42,
+            19.61,
+            0.6,
+            1.53,
+            9.87
+        ],
+        "serving_weight_grams": 30,
+        "nf_calories": 147.6,
+        "id": "18"
+    },
+    {
+        "food_name": "cendol dessert",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            17.94,
+            49.28,
+            0.04,
+            3.06,
+            39.64
+        ],
+        "serving_weight_grams": 334.3,
+        "nf_calories": 355.26,
+        "id": "19"
+    },
+    {
+        "food_name": "french fries",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            17.23,
+            48.48,
+            4.45,
+            4.01,
+            0.35
+        ],
+        "serving_weight_grams": 117,
+        "nf_calories": 365.04,
+        "id": "20"
+    },
+    {
+        "food_name": "grape",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.08,
+            8.87,
+            0.44,
+            0.35,
+            7.59
+        ],
+        "serving_weight_grams": 49,
+        "nf_calories": 33.81,
+        "id": "21"
+    },
+    {
+        "food_name": "guacamole",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            4.09,
+            2.55,
+            1.84,
+            0.55,
+            0.16
+        ],
+        "serving_weight_grams": 30,
+        "nf_calories": 45.26,
+        "id": "22"
+    },
+    {
+        "food_name": "hot dog",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            14.09,
+            1.28,
+            0,
+            5.61,
+            0.61
+        ],
+        "serving_weight_grams": 48,
+        "nf_calories": 154.56,
+        "id": "23"
+    },
+    {
+        "food_name": "ice cream",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            14.52,
+            31.15,
+            0.92,
+            4.62,
+            28.01
+        ],
+        "serving_weight_grams": 132,
+        "nf_calories": 273.24,
+        "id": "24"
+    },
+    {
+        "food_name": "muffin",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            18.16,
+            59.89,
+            1.24,
+            5.07,
+            35.56
+        ],
+        "serving_weight_grams": 113,
+        "nf_calories": 423.75,
+        "id": "25"
+    },
+    {
+        "food_name": "orange",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.21,
+            17.56,
+            3.08,
+            1.27,
+            11.9
+        ],
+        "serving_weight_grams": 140,
+        "nf_calories": 68.6,
+        "id": "26"
+    },
+    {
+        "food_name": "pancake",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            3.88,
+            11.32,
+            null,
+            2.56,
+            null
+        ],
+        "serving_weight_grams": 40,
+        "nf_calories": 90.8,
+        "id": "27"
+    },
+    {
+        "food_name": "pear",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.25,
+            27.11,
+            5.52,
+            0.64,
+            17.36
+        ],
+        "serving_weight_grams": 178,
+        "nf_calories": 101.46,
+        "id": "28"
+    },
+    {
+        "food_name": "popcorn",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            2.69,
+            4.36,
+            0.79,
+            0.59,
+            0.04
+        ],
+        "serving_weight_grams": 7.9,
+        "nf_calories": 44,
+        "id": "29"
+    },
+    {
+        "food_name": "pretzel",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.83,
+            22.79,
+            0.96,
+            2.85,
+            0.63
+        ],
+        "serving_weight_grams": 28.35,
+        "nf_calories": 108.86,
+        "id": "30"
+    },
+    {
+        "food_name": "strawberry",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.27,
+            6.91,
+            1.8,
+            0.6,
+            4.4
+        ],
+        "serving_weight_grams": 90,
+        "nf_calories": 28.8,
+        "id": "31"
+    },
+    {
+        "food_name": "tomato",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.25,
+            4.78,
+            1.48,
+            1.08,
+            3.23
+        ],
+        "serving_weight_grams": 123,
+        "nf_calories": 22.14,
+        "id": "32"
+    },
+    {
+        "food_name": "waffle",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            10.58,
+            24.68,
+            null,
+            5.93,
+            null
+        ],
+        "serving_weight_grams": 75,
+        "nf_calories": 218.25,
+        "id": "33"
+    },
+    {
+        "food_name": "soft drinks",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.93,
+            38.33,
+            0,
+            0,
+            36.78
+        ],
+        "serving_weight_grams": 370,
+        "nf_calories": 155.4,
+        "id": "34"
+    },
+    {
+        "food_name": "cheese",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            9.33,
+            0.87,
+            0,
+            6.4,
+            0.13
+        ],
+        "serving_weight_grams": 28,
+        "nf_calories": 113.12,
+        "id": "35"
+    },
+    {
+        "food_name": "cocktail",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.07,
+            10.12,
+            0.07,
+            0.21,
+            9.72
+        ],
+        "serving_weight_grams": 116.61,
+        "nf_calories": 166.64,
+        "id": "36"
+    },
+    {
+        "food_name": "coffee",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.05,
+            0,
+            0,
+            0.28,
+            0
+        ],
+        "serving_weight_grams": 237,
+        "nf_calories": 2.37,
+        "id": "37"
+    },
+    {
+        "food_name": "cooking spray",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.24,
+            0.06,
+            0,
+            0,
+            0
+        ],
+        "serving_weight_grams": 0.3,
+        "nf_calories": 2.38,
+        "id": "38"
+    },
+    {
+        "food_name": "crab",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.87,
+            0,
+            0,
+            21.1,
+            0
+        ],
+        "serving_weight_grams": 118,
+        "nf_calories": 97.94,
+        "id": "39"
+    },
+    {
+        "food_name": "croissant",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            14.07,
+            30.69,
+            1.74,
+            5.49,
+            7.54
+        ],
+        "serving_weight_grams": 67,
+        "nf_calories": 272.02,
+        "id": "40"
+    },
+    {
+        "food_name": "cucumber",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.22,
+            7.3,
+            1,
+            1.31,
+            3.36
+        ],
+        "serving_weight_grams": 201,
+        "nf_calories": 30.15,
+        "id": "41"
+    },
+    {
+        "food_name": "doughnut",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            13.62,
+            28.76,
+            1.26,
+            3.68,
+            13.65
+        ],
+        "serving_weight_grams": 60,
+        "nf_calories": 252.6,
+        "id": "42"
+    },
+    {
+        "food_name": "egg",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            4.76,
+            0.36,
+            0,
+            6.28,
+            0.19
+        ],
+        "serving_weight_grams": 50,
+        "nf_calories": 71.5,
+        "id": "43"
+    },
+    {
+        "food_name": "fresh fruit",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.47,
+            24.48,
+            3.26,
+            1.36,
+            16.45
+        ],
+        "serving_weight_grams": 162.4,
+        "nf_calories": 96.62,
+        "id": "44"
+    },
+    {
+        "food_name": "grapefruit",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.17,
+            13.11,
+            1.97,
+            0.95,
+            8.47
+        ],
+        "serving_weight_grams": 123,
+        "nf_calories": 51.66,
+        "id": "45"
+    },
+    {
+        "food_name": "hamburger",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            26.56,
+            40.27,
+            null,
+            34.28,
+            null
+        ],
+        "serving_weight_grams": 226,
+        "nf_calories": 540.14,
+        "id": "46"
+    },
+    {
+        "food_name": "honeycomb",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.94,
+            27.72,
+            1.02,
+            1.92,
+            10.08
+        ],
+        "serving_weight_grams": 32,
+        "nf_calories": 126.08,
+        "id": "47"
+    },
+    {
+        "food_name": "juice",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0,
+            31.19,
+            0.24,
+            0.31,
+            28.7
+        ],
+        "serving_weight_grams": 237,
+        "nf_calories": 127.98,
+        "id": "48"
+    },
+    {
+        "food_name": "lemon",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.25,
+            7.83,
+            2.35,
+            0.92,
+            2.1
+        ],
+        "serving_weight_grams": 84,
+        "nf_calories": 24.36,
+        "id": "49"
+    },
+    {
+        "food_name": "lobster",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.65,
+            2.65,
+            0,
+            22.45,
+            null
+        ],
+        "serving_weight_grams": 85,
+        "nf_calories": 121.55,
+        "id": "50"
+    },
+    {
+        "food_name": "mango",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.28,
+            50.33,
+            5.38,
+            2.76,
+            45.9
+        ],
+        "serving_weight_grams": 336,
+        "nf_calories": 201.6,
+        "id": "51"
+    },
+    {
+        "food_name": "milk",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            4.83,
+            11.71,
+            0,
+            8.05,
+            12.35
+        ],
+        "serving_weight_grams": 244,
+        "nf_calories": 122,
+        "id": "52"
+    },
+    {
+        "food_name": "mushroom",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.06,
+            0.63,
+            0.26,
+            0.26,
+            0.28
+        ],
+        "serving_weight_grams": 12,
+        "nf_calories": 3.36,
+        "id": "53"
+    },
+    {
+        "food_name": "oyster",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.15,
+            2.48,
+            0,
+            4.72,
+            0
+        ],
+        "serving_weight_grams": 25,
+        "nf_calories": 40.75,
+        "id": "54"
+    },
+    {
+        "food_name": "pasta",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.15,
+            38.27,
+            2.23,
+            7.19,
+            0.69
+        ],
+        "serving_weight_grams": 124,
+        "nf_calories": 195.92,
+        "id": "55"
+    },
+    {
+        "food_name": "pastry",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            15.57,
+            33.42,
+            1.9,
+            5.69,
+            11.91
+        ],
+        "serving_weight_grams": 70,
+        "nf_calories": 297.1,
+        "id": "56"
+    },
+    {
+        "food_name": "peach",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.44,
+            16.7,
+            2.63,
+            1.59,
+            14.68
+        ],
+        "serving_weight_grams": 175,
+        "nf_calories": 68.25,
+        "id": "57"
+    },
+    {
+        "food_name": "pineapple",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.1,
+            10.82,
+            1.16,
+            0.45,
+            8.13
+        ],
+        "serving_weight_grams": 82.5,
+        "nf_calories": 41.25,
+        "id": "58"
+    },
+    {
+        "food_name": "pizza",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            10.37,
+            35.66,
+            2.46,
+            12.19,
+            3.83
+        ],
+        "serving_weight_grams": 107,
+        "nf_calories": 284.62,
+        "id": "59"
+    },
+    {
+        "food_name": "pomegranate",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            3.3,
+            52.73,
+            11.28,
+            4.71,
+            38.55
+        ],
+        "serving_weight_grams": 282,
+        "nf_calories": 234.06,
+        "id": "60"
+    },
+    {
+        "food_name": "potato",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.22,
+            36.59,
+            3.81,
+            4.33,
+            2.04
+        ],
+        "serving_weight_grams": 173,
+        "nf_calories": 160.89,
+        "id": "61"
+    },
+    {
+        "food_name": "pumpkin",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.17,
+            12.01,
+            2.7,
+            1.76,
+            5.1
+        ],
+        "serving_weight_grams": 245,
+        "nf_calories": 49,
+        "id": "62"
+    },
+    {
+        "food_name": "radish",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0,
+            0.15,
+            0.07,
+            0.03,
+            0.08
+        ],
+        "serving_weight_grams": 4.5,
+        "nf_calories": 0.72,
+        "id": "63"
+    },
+    {
+        "food_name": "salad",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.2,
+            4.21,
+            1.66,
+            1.23,
+            1.83
+        ],
+        "serving_weight_grams": 85,
+        "nf_calories": 19.98,
+        "id": "64"
+    },
+    {
+        "food_name": "indian food",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            10.67,
+            39.87,
+            3.95,
+            18.21,
+            4.05
+        ],
+        "serving_weight_grams": 208.33,
+        "nf_calories": 324.27,
+        "id": "65"
+    },
+    {
+        "food_name": "sandwich",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            1.88,
+            28.23,
+            2.32,
+            6.22,
+            3.43
+        ],
+        "serving_weight_grams": 58,
+        "nf_calories": 154.86,
+        "id": "66"
+    },
+    {
+        "food_name": "shrimp",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.09,
+            0.08,
+            0,
+            1.14,
+            0
+        ],
+        "serving_weight_grams": 5,
+        "nf_calories": 5.95,
+        "id": "67"
+    },
+    {
+        "food_name": "squash",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.7,
+            6.82,
+            1.98,
+            1.87,
+            4.46
+        ],
+        "serving_weight_grams": 180,
+        "nf_calories": 41.4,
+        "id": "68"
+    },
+    {
+        "food_name": "squid",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.39,
+            0.87,
+            0,
+            4.42,
+            0
+        ],
+        "serving_weight_grams": 28.35,
+        "nf_calories": 26.08,
+        "id": "69"
+    },
+    {
+        "food_name": "turkey sandwich",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            13.3,
+            29.12,
+            2,
+            20.7,
+            3.83
+        ],
+        "serving_weight_grams": 149.43,
+        "nf_calories": 323.7,
+        "id": "70"
+    },
+    {
+        "food_name": "sushi",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            18.75,
+            37.89,
+            3.23,
+            7.81,
+            7.02
+        ],
+        "serving_weight_grams": 211.07,
+        "nf_calories": 348.54,
+        "id": "71"
+    },
+    {
+        "food_name": "taco",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            9.95,
+            20.63,
+            2.96,
+            9.44,
+            1.6
+        ],
+        "serving_weight_grams": 102,
+        "nf_calories": 210.12,
+        "id": "72"
+    },
+    {
+        "food_name": "tart",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            17.64,
+            61.81,
+            2.13,
+            3.35,
+            37.5
+        ],
+        "serving_weight_grams": 146.5,
+        "nf_calories": 411.99,
+        "id": "73"
+    },
+    {
+        "food_name": "tea",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0,
+            0.53,
+            0,
+            0,
+            null
+        ],
+        "serving_weight_grams": 178,
+        "nf_calories": 1.78,
+        "id": "74"
+    },
+    {
+        "food_name": "vegetable",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.14,
+            11.91,
+            4,
+            2.6,
+            2.84
+        ],
+        "serving_weight_grams": 91,
+        "nf_calories": 59.15,
+        "id": "75"
+    },
+    {
+        "food_name": "watermelon",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.43,
+            21.59,
+            1.14,
+            1.74,
+            17.73
+        ],
+        "serving_weight_grams": 286,
+        "nf_calories": 85.8,
+        "id": "76"
+    },
+    {
+        "food_name": "wine",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0,
+            3.82,
+            null,
+            0.1,
+            null
+        ],
+        "serving_weight_grams": 147,
+        "nf_calories": 122.01,
+        "id": "77"
+    },
+    {
+        "food_name": "winter melon",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.35,
+            5.32,
+            1.75,
+            0.7,
+            2.07
+        ],
+        "serving_weight_grams": 175,
+        "nf_calories": 24.5,
+        "id": "78"
+    },
+    {
+        "food_name": "zucchini",
+        "nf": [
+            "nf_total_fat",
+            "nf_total_carbohydrate",
+            "nf_dietary_fiber",
+            "nf_protein",
+            "nf_sugars"
+        ],
+        "value": [
+            0.72,
+            5.38,
+            2,
+            2.28,
+            3.42
+        ],
+        "serving_weight_grams": 200,
+        "nf_calories": 30,
+        "id": "79"
+    }
+]
