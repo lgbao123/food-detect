@@ -123,7 +123,7 @@ def get_predict(img, model, confidence, color_pick_list, class_list, draw_thick,
                 'class':  [dec[5].cpu().detach().numpy().astype(int) for dec in results[0]],
                 'name':  [model.names[dec[5].cpu().detach().numpy().astype(int)] for dec in results[0]],
             })
-    print(box)
+    # print(box)
 
         # box = results.pandas().xyxy[0]
     for i in box.index:
