@@ -259,7 +259,6 @@ def getDFPredict(listIdPred,food_names,calories):
     df_result = pd.DataFrame(data.values(), columns=['Name', 'Number','Calories','Url'])
     return df_result
 
-from models.yolo import Model
 
 @st.cache_data
 def showInfo():
@@ -267,10 +266,10 @@ def showInfo():
 
     st.markdown(
         """
-    The Food-101 Data Set :
-    - This dataset consists of 101 food categories, with 101'000 images
-    - Each type of food has 750 training samples and 250 test samples
-    - Size : 5 gb 
+    The OID Data Set ([link](https://storage.googleapis.com/openimages/web/visualizer/index.html?set=valtest&type=detection&c=%2Fm%2F014j1m)) :
+    - This dataset consists of 74 food categories, with 26'176 images (21'233 training - 4943 test) 
+    - Each type of food has 250-300 training samples and 50-100 test samples
+    - Size : 1 gb 
     """
     )
     st.write("Workflow : ")
@@ -288,9 +287,10 @@ def showInfo():
     Pretrained model :
     - Pretrained on the MS COCO dataset for 300 epochs.
     - The COCO (Common Objects in Context) dataset is a large-scale image recognition dataset for object detection, segmentation, and captioning tasks.
-    - It contains over 330,000 images, each annotated with 80 object categories.
+    - It contains over 330,000 images, each annotated with 80 object categories. [link](https://cocodataset.org/#home)
     """
     )
+
     st.markdown(
         """
     YOLOv7 Architecture :
@@ -301,51 +301,14 @@ def showInfo():
     )
     st.write('---')
     
-    st.success("Total running time for training process: ~140 m (97% accuracy train - 85% accuracy in test)")
+    st.success("Total running time for training process: ~3900 m (~65 h) (mAP : 0.86)")
     st.markdown("<h5>Evaluate the model :</h5>", unsafe_allow_html=True)
     
     st.write(
         f"You can check out this [link](https://www.nutritionix.com/food/apple)")
-    # st.image([pre_image])
-    # model_selected = st.selectbox("Select Your Model: ",
-    #                               ['2 Classes (Simple Convolutional)', '10 Classes (EfficientNet-B0)', '101 Classes (EfficientNet-B1)'])
-
-    # if model_selected == '2 Classes (Simple Convolutional)':
-
-    #     model_1 = returnModel()
-    #     st.header("Summary model : ")
-    #     model_1.summary(print_fn=lambda x: st.text(x))
-    #     st.image([fit_2_image])
-    #     st.success("Total running time for training process: ~41 s (97% accuracy train - 88% accuracy in test) ")
-    #     st.header("Evaluate the model : ")
-    #     history_load = np.load('./history/history_2.npy',
-    #                            allow_pickle='TRUE').item()
-    #     fig = plotHistory(history_load)
-    #     st.write(fig)
-    # if model_selected == '10 Classes (EfficientNet-B0)':
-    #     model_1 = returnModel(select=2)
-    #     st.header("Summary model : ")
-    #     model_1.summary(print_fn=lambda x: st.text(x))
-    #     st.image([fit_10_image])
-    #     st.success("Total running time for training process: ~20 m (88% accuracy train - 92% accuracy in test) ")
-    #     st.header("Evaluate the model : ")
-    #     history_load = np.load('./history/history_10.npy',
-    #                            allow_pickle='TRUE').item()
-    #     fig = plotHistory(history_load)
-    #     st.write(fig)
-    # if model_selected == '101 Classes (EfficientNet-B1)':
-    # model_1 = returnModel(select=3)
-    # st.header("Summary model : ")
-    # model_1.summary(print_fn=lambda x: st.text(x))
-    # st.image([fit_101_image])
-    # st.success("Total running time for training process: ~140 m (97% accuracy train - 85% accuracy in test)")
-    # st.header("Evaluate the model : ")
-    # history_load = np.load('./history/history_101.npy',
-    #                         allow_pickle='TRUE').item()
-    # fig = plotHistory(history_load)
-    # st.write(fig)
-    # st.write("F1 score of each class :")
-    # class_f1_scores = np.load(
-    #     './history/score_101.npy', allow_pickle='TRUE').item()
-    # fig1 = plotF1(class_f1_scores)
-    # st.pyplot(fig1)
+    map = cv2.imread('./assets/map.png')
+    recall = cv2.imread('./assets/recall.png')
+    pre = cv2.imread('./assets/pre.png')
+    st.image(map, channels='BGR')
+    st.image(recall, channels='BGR')
+    st.image(pre, channels='BGR')

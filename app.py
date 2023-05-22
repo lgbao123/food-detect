@@ -66,7 +66,7 @@ if model_type == 'YOLOv7':
 
     # Inference Mode
     options = st.sidebar.radio(
-        'Options:', ('Webcam', 'Image', 'Video'), index=1)
+        'Options:', ('Image', 'Webcam'), index=0)
 
     # Confidence
     confidence = st.sidebar.slider(
@@ -122,22 +122,21 @@ if model_type == 'YOLOv7':
             # listname = [1]
             # df=df[df["id"].apply(lambda x : x in listname)]
             # food_names,calories,df_nf=loadFood()
+            
             # listIdPred =[0,0,0,0,1]
             df_result = getDFPredict(listIdPred,food_names,calories)
             df_nf=df_nf[df_nf["id"].apply(lambda x : x in listIdPred)]
             get_save_stat(False,save2,save3,False,df_result,df_nf)
-        
-
     # Video
-    if options == 'Video':
-        upload_video_file = st.sidebar.file_uploader(
-            'Upload Video', type=['mp4', 'avi', 'mkv'])
-        if upload_video_file is not None:
-            pred = st.checkbox(f'Predict Using YOLOv7')
+    # if options == 'Video':
+    #     upload_video_file = st.sidebar.file_uploader(
+    #         'Upload Video', type=['mp4', 'avi', 'mkv'])
+    #     if upload_video_file is not None:
+    #         pred = st.checkbox(f'Predict Using YOLOv7')
 
-            tfile = tempfile.NamedTemporaryFile(delete=False)
-            tfile.write(upload_video_file.read())
-            cap = cv2.VideoCapture(tfile.name)
+    #         tfile = tempfile.NamedTemporaryFile(delete=False)
+    #         tfile.write(upload_video_file.read())
+    #         cap = cv2.VideoCapture(tfile.name)
 
     # Web-cam
     if options == 'Webcam':
@@ -186,16 +185,17 @@ if (cap != None) and pred:
             )
             break
         # img1 = cv2.resize(img, (0, 0), fx=0.1, fy=0.1)
-        img = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
+        # img = cv2.resize(img, (0, 0), fx=0.7, fy=0.7)
         current_no_class =[]
         # Get predict
         img, current_no_class,listIdPred = get_predict(
                 img, model, confidence, color_pick_list, class_labels, draw_thick)
+        # img = GetPredict(img)
         # FPS
         c_time = time.time()
         fps = 1 / (c_time - p_time)
         p_time = c_time
-        cv2.putText(img,f"FPS : {int(fps)}", (20,30),cv2.FONT_HERSHEY_PLAIN,2,(0,255,0),2)
+        # cv2.putText(img,f"FPS : {int(fps)}", (20,30),cv2.FONT_HERSHEY_PLAIN,2,(0,255,0),2)
         FRAME_WINDOW.image(img, channels='BGR', use_column_width=True)
         st.session_state['img_save']= img
 
@@ -205,7 +205,8 @@ if (cap != None) and pred:
         # class_fq = json.dumps(class_fq, indent=4)
         # class_fq = json.loads(class_fq)
         # df_fq = pd.DataFrame(class_fq.items(), columns=['Class', 'Number'])
-        listIdPred =[0,0,0,0,1]
+        
+        # listIdPred =[0,0,0,0,1]
         df_result = getDFPredict(listIdPred,food_names,calories)
         st.session_state['df_result']= df_result
         st.session_state['listIdPred']= listIdPred
