@@ -5,7 +5,7 @@
 
 
 
-FoodVision is an end-to-end CNN Image Classification Model which identifies the food in your image.
+FoodVision is an end-to-end CNN Image Detection Model which identifies the food in your image.
 
 
 ### Installation
