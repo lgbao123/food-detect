@@ -22,7 +22,9 @@ model_type = st.sidebar.selectbox(
 )
 
 # st.title(f'YOLOv7 Predictions')
-TITLE = st.empty()
+
+TITLE1 = st.empty()
+TITLE2 = st.empty()
 save1 = st.empty()
 save2 = st.empty()
 save3 = st.empty()
@@ -38,7 +40,8 @@ if model_type == 'Info':
 
 # YOLOv7 Model
 if model_type == 'YOLOv7':
-    TITLE.title(f'YOLOv7 Predictions')
+    TITLE1.title("Food Detection 🍔📷")
+    TITLE2.header("Identify what's in your food photos!")
     # GPU
     gpu_option = st.sidebar.radio(
         'PU Options:', ('CPU', 'GPU'))
