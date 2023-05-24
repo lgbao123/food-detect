@@ -11,9 +11,15 @@ from numpy import random
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
+import os 
+import gdown
 
 st.sidebar.title('Settings')
 path_model_file='./last.pt'
+if not os.path.isfile(path_model_file):
+    url = 'https://drive.google.com/file/d/1Vp0oBDJl1OAF3W70rHzPw1NAfB8M2l8Z/view?usp=drive_link'
+    output_path = 'last.pt'
+    gdown.download(url, output_path, quiet=False,fuzzy=True)
 food_names,calories,df_nf=loadFood()
 
 # Choose the model
