@@ -138,12 +138,12 @@ if model_type == 'YOLOv7':
 
     # Web-cam
     if options == 'Webcam':
-        cam_options = st.sidebar.selectbox('Webcam Channel',
-                                            ('Select Channel', '0', '1', '2', '3'))
+        # cam_options = st.sidebar.selectbox('Webcam Channel',
+        #                                     ('Select Channel', '0', '1', '2', '3'))
 
-        if not cam_options == 'Select Channel':
-            pred = st.checkbox(f'Predict Using YOLOv7')
-            cap = cv2.VideoCapture(int(cam_options))
+        # if not cam_options == 'Select Channel':
+        #     pred = st.checkbox(f'Predict Using YOLOv7')
+        #     cap = cv2.VideoCapture(int(cam_options))
         
         def video_frame_callback(frame):
             # print(frame)
@@ -163,7 +163,7 @@ if model_type == 'YOLOv7':
             # return frame
             return av.VideoFrame.from_ndarray(img, format="bgr24")
         account_sid = 'ACde6e622ff59ca01ca77864061fb5c7a6'
-        auth_token = 'd508db1458b229b4f51aa2aeaebf4a94'
+        auth_token = 'c0289f72f2bc77fa3f77abb8893eb409'
         client = Client(account_sid, auth_token)
 
         token = client.tokens.create()
