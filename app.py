@@ -3,16 +3,23 @@ import cv2
 import torch
 from utils.hubconf import  loadModel
 import numpy as np
-import tempfile
+
 import time
-from collections import Counter
+
 from model_utils import get_save_stat,showInfo,getDFPredict , get_system_stat,get_predict,loadFood
 from numpy import random
 import plotly.express as px
 import pandas as pd
-import plotly.graph_objects as go
+
 import os 
 import gdown
+from streamlit_webrtc import webrtc_streamer
+import av
+from twilio.rest import Client
+import threading
+
+lock = threading.Lock()
+img_container = {"img": None}
 
 st.sidebar.title('Settings')
 path_model_file='./last.pt'
@@ -28,7 +35,7 @@ model_type = st.sidebar.selectbox(
 )
 
 # st.title(f'YOLOv7 Predictions')
-
+ctx = None
 TITLE1 = st.empty()
 TITLE2 = st.empty()
 save1 = st.empty()
@@ -114,24 +121,6 @@ if model_type == 'YOLOv7':
                 img, model, confidence, color_pick_list, class_labels, draw_thick)
             FRAME_WINDOW.image(img, channels='BGR')
 
-            # Current number of classes
-            # class_fq = dict(
-            #     Counter(i for sub in current_no_class for i in set(sub)))
-            # class_fq = dict(Counter(current_no_class))
-            # idCounter = Counter(listIdPred)
-            # print(idCounter)
-            # print(class_fq)
-            # class_fq = json.dumps(class_fq, indent=4)
-            # class_fq = json.loads(class_fq)
-            # df_fq = pd.DataFrame(class_fq.items(), columns=['Class', 'Number'])
-            # Get df nutrition
-            # df = pd.read_json(r'./food.json')
-            # df = df.explode(['nf', 'value'])
-            # df.value = df.value.astype('float').round(2)
-            # listname = [1]
-            # df=df[df["id"].apply(lambda x : x in listname)]
-            # food_names,calories,df_nf=loadFood()
-            
             # listIdPred =[0,0,0,0,1]
             df_result = getDFPredict(listIdPred,food_names,calories)
             df_nf=df_nf[df_nf["id"].apply(lambda x : x in listIdPred)]
@@ -155,8 +144,75 @@ if model_type == 'YOLOv7':
         if not cam_options == 'Select Channel':
             pred = st.checkbox(f'Predict Using YOLOv7')
             cap = cv2.VideoCapture(int(cam_options))
+        
+        def video_frame_callback(frame):
+            # print(frame)
+            img = frame.to_ndarray(format="bgr24")
+            with lock:
+                kq = []
+                img, current_no_class,listIdPred = get_predict(
+                    img, model, confidence, color_pick_list, class_labels, draw_thick) 
+                df_result = getDFPredict(listIdPred,food_names,calories)
+                st.session_state['df_result']= df_result
+                st.session_state['listIdPred']= listIdPred
+                kq.append(img)   
+                kq.append(df_result)   
+                kq.append(listIdPred)   
+                img_container["img"] = kq
+                # print(img_container['img'])
+            # return frame
+            return av.VideoFrame.from_ndarray(img, format="bgr24")
+        account_sid = 'ACde6e622ff59ca01ca77864061fb5c7a6'
+        auth_token = 'd508db1458b229b4f51aa2aeaebf4a94'
+        client = Client(account_sid, auth_token)
+
+        token = client.tokens.create()
+
+       
+        ctx= webrtc_streamer(key="example" ,sendback_audio=False ,sendback_video=True,
+                            #  video_processor_factory = getFrame,
+                            video_frame_callback=video_frame_callback,
+                          rtc_configuration={  "iceServers": token.ice_servers},
+        )
+        
 
 
+            
+# window = st.empty()
+
+
+if ctx != None:
+    # print('323')
+    save_btn = st.button('save')
+
+    stframe1 = st.empty()
+    stframe2 = st.empty()
+    FRAME_WINDOW.empty()
+    # if(save_btn):
+    #     st.session_state['save'] =True
+    # Save img
+
+    while ctx.state.playing :
+
+        with lock:
+            kq  =img_container["img"]
+                
+            
+        if kq is None:
+            continue
+  
+        # FRAME_WINDOW.image(kq[0],channels='BGR')
+
+        get_system_stat(False, stframe2, False, kq[1])
+        if(save_btn):
+            df_nf=df_nf[df_nf["id"].apply(lambda x : x in kq[2])]
+            get_save_stat(save1,save2,save3,
+                      kq[0],
+                      kq[1],
+                      df_nf)
+        save_btn = False
+           
+        
 p_time = 0
 if (cap != None) and pred:
     

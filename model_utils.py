@@ -156,14 +156,16 @@ def getStyleDF():
 
 def get_system_stat(stframe1, stframe2, fps, df_fq):
     # Updating Inference results
-    with stframe1.container():
-        st.markdown("<h2>Inference Statistics</h2>", unsafe_allow_html=True)
-        if round(fps, 4) > 1:
-            st.markdown(
-                f"<h4 style='color:green;'>Frame Rate: {round(fps, 4)}</h4>", unsafe_allow_html=True)
-        else:
-            st.markdown(
-                f"<h4 style='color:red;'>Frame Rate: {round(fps, 4)}</h4>", unsafe_allow_html=True)
+    if stframe1 :
+        
+        with stframe1.container():
+            st.markdown("<h2>Inference Statistics</h2>", unsafe_allow_html=True)
+            if round(fps, 4) > 1:
+                st.markdown(
+                    f"<h4 style='color:green;'>Frame Rate: {round(fps, 4)}</h4>", unsafe_allow_html=True)
+            else:
+                st.markdown(
+                    f"<h4 style='color:red;'>Frame Rate: {round(fps, 4)}</h4>", unsafe_allow_html=True)
 
     with stframe2.container():
         st.markdown("<h3>Detected objects in curret Frame</h3>",
