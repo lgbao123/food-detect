@@ -307,7 +307,7 @@ def showInfo():
     st.markdown("<h5>Evaluate the model :</h5>", unsafe_allow_html=True)
     
     st.write(
-        f"You can check out this [link](https://www.nutritionix.com/food/apple)")
+        f"You can check out this [link](https://wandb.ai/crisbao2609/OIDv2?workspace=user-crisbao2609)")
     map = cv2.imread('./assets/map.png')
     recall = cv2.imread('./assets/recall.png')
     pre = cv2.imread('./assets/pre.png')
