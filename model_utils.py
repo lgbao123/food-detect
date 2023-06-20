@@ -86,22 +86,21 @@ def get_yolo(img, model_type, model, confidence, color_pick_list, class_list, dr
     return img, current_no_class
 
 
-def get_predict(img, model, confidence, color_pick_list, class_list, draw_thick,webcam = False):
-    current_no_class = []
+def get_predict(img, model, confidence, color_pick_list, draw_thick):
+
     current_no_index = []
     device = torch.device('cuda') if next(model.parameters()).is_cuda else torch.device('cpu')
     # print(next(model.parameters()).is_cuda)
-    if webcam:
-        cudnn.benchmark = True  # set True to speed up constant image size inference
+   
     imgsz =640
     stride = int(model.stride.max())  # model stride
     img0 =img
     # Padded resize
     img = letterbox(img0, imgsz, stride=stride)[0]
-
     # Convert
-    img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to 3x416x416
+    img = img[:, :, ::-1].transpose(2, 0, 1)  
     img = np.ascontiguousarray(img)
+    # print(img.shape)
     img = torch.from_numpy(img).to(device)
     img =  img.float()  # uint8 to fp16/32
     img /= 255.0  # 0 - 255 to 0.0 - 1.0
@@ -133,9 +132,9 @@ def get_predict(img, model, confidence, color_pick_list, class_list, draw_thick,
         if conf > confidence:
             plot_one_box([xmin, ymin, xmax, ymax], img0, label=f'{class_name} {conf:.2f}',
                             color=color_pick_list[id], line_thickness=draw_thick)
-            current_no_class.append(class_name)
+          
             current_no_index.append(int(id))
-    return img0, current_no_class,current_no_index
+    return img0,current_no_index
 
 @st.cache_data
 def getStyleDF():
@@ -296,9 +295,9 @@ def showInfo():
     st.markdown(
         """
     YOLOv7 Architecture :
-    - Backbone: ELAN, E-ELAN
-    - Neck: CSP-SPP and (ELAN, E-ELAN)-PAN
-    - Head: YOLOR and Auxiliary head
+    - Backbone: ELAN
+    - Neck: FPN
+    - Head: YOLOR 
     """
     )
     st.write('---')

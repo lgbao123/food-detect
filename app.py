@@ -117,8 +117,8 @@ if model_type == 'YOLOv7':
             img = cv2.imdecode(file_bytes, 1)
             FRAME_WINDOW.image(img, channels='BGR')
             # Get predict
-            img, current_no_class,listIdPred = get_predict(
-                img, model, confidence, color_pick_list, class_labels, draw_thick)
+            img,listIdPred = get_predict(
+                img, model, confidence, color_pick_list, draw_thick)
             FRAME_WINDOW.image(img, channels='BGR')
 
             # listIdPred =[0,0,0,0,1]
@@ -150,8 +150,8 @@ if model_type == 'YOLOv7':
             img = frame.to_ndarray(format="bgr24")
             with lock:
                 kq = []
-                img, current_no_class,listIdPred = get_predict(
-                    img, model, confidence, color_pick_list, class_labels, draw_thick) 
+                img,listIdPred = get_predict(
+                    img, model, confidence, color_pick_list, draw_thick) 
                 df_result = getDFPredict(listIdPred,food_names,calories)
                 st.session_state['df_result']= df_result
                 st.session_state['listIdPred']= listIdPred
@@ -181,112 +181,112 @@ if model_type == 'YOLOv7':
 # window = st.empty()
 
 
-if ctx != None:
-    # print('323')
-    save_btn = st.button('save')
+# if ctx != None:
+#     # print('323')
+#     save_btn = st.button('save')
 
-    stframe1 = st.empty()
-    stframe2 = st.empty()
-    FRAME_WINDOW.empty()
-    # if(save_btn):
-    #     st.session_state['save'] =True
-    # Save img
+#     stframe1 = st.empty()
+#     stframe2 = st.empty()
+#     FRAME_WINDOW.empty()
+#     # if(save_btn):
+#     #     st.session_state['save'] =True
+#     # Save img
 
-    while ctx.state.playing :
+#     while ctx.state.playing :
 
-        with lock:
-            kq  =img_container["img"]
+#         with lock:
+#             kq  =img_container["img"]
                 
             
-        if kq is None:
-            continue
+#         if kq is None:
+#             continue
   
-        # FRAME_WINDOW.image(kq[0],channels='BGR')
+#         # FRAME_WINDOW.image(kq[0],channels='BGR')
 
-        get_system_stat(False, stframe2, False, kq[1])
-        if(save_btn):
-            df_nf=df_nf[df_nf["id"].apply(lambda x : x in kq[2])]
-            get_save_stat(save1,save2,save3,
-                      kq[0],
-                      kq[1],
-                      df_nf)
-        save_btn = False
+#         get_system_stat(False, stframe2, False, kq[1])
+#         if(save_btn):
+#             df_nf=df_nf[df_nf["id"].apply(lambda x : x in kq[2])]
+#             get_save_stat(save1,save2,save3,
+#                       kq[0],
+#                       kq[1],
+#                       df_nf)
+#         save_btn = False
            
         
-p_time = 0
-if (cap != None) and pred:
+# p_time = 0
+# if (cap != None) and pred:
     
-    save_btn = st.button('save')
-    # save1 = st.empty()
-    # save2 = st.empty()
-    # save3 = st.empty()
-    stframe1 = st.empty()
-    stframe2 = st.empty()
+#     save_btn = st.button('save')
+#     # save1 = st.empty()
+#     # save2 = st.empty()
+#     # save3 = st.empty()
+#     stframe1 = st.empty()
+#     stframe2 = st.empty()
 
 
-    if(save_btn):
-        st.session_state['save'] =True
-    # Save img
-    if 'save' in st.session_state and 'img_save' in st.session_state:
-        # df = pd.read_json(r'./food.json')
-        # df = df.explode(['nf', 'value'])
-        # get_save_stat(save1,save2,save3,
-        #                 st.session_state['img_save'],
-        #                 st.session_state['df_save'],
-        #                 df
-        #             )
-        df_nf=df_nf[df_nf["id"].apply(lambda x : x in st.session_state['listIdPred'])]
-        get_save_stat(save1,save2,save3,
-                      st.session_state['img_save'],
-                      st.session_state['df_result'],
-                      df_nf)
-    while True:
-        success, img = cap.read()
+#     if(save_btn):
+#         st.session_state['save'] =True
+#     # Save img
+#     if 'save' in st.session_state and 'img_save' in st.session_state:
+#         # df = pd.read_json(r'./food.json')
+#         # df = df.explode(['nf', 'value'])
+#         # get_save_stat(save1,save2,save3,
+#         #                 st.session_state['img_save'],
+#         #                 st.session_state['df_save'],
+#         #                 df
+#         #             )
+#         df_nf=df_nf[df_nf["id"].apply(lambda x : x in st.session_state['listIdPred'])]
+#         get_save_stat(save1,save2,save3,
+#                       st.session_state['img_save'],
+#                       st.session_state['df_result'],
+#                       df_nf)
+#     while True:
+#         success, img = cap.read()
        
-        if not success:
-            st.error(
-                f"{options} NOT working\nCheck {options} properly!!",
-                icon="🚨"
-            )
-            break
-        # img1 = cv2.resize(img, (0, 0), fx=0.1, fy=0.1)
-        # img = cv2.resize(img, (0, 0), fx=0.7, fy=0.7)
-        current_no_class =[]
-        # Get predict
-        img, current_no_class,listIdPred = get_predict(
-                img, model, confidence, color_pick_list, class_labels, draw_thick)
-        # img = GetPredict(img)
-        # FPS
-        c_time = time.time()
-        fps = 1 / (c_time - p_time)
-        p_time = c_time
-        # cv2.putText(img,f"FPS : {int(fps)}", (20,30),cv2.FONT_HERSHEY_PLAIN,2,(0,255,0),2)
-        FRAME_WINDOW.image(img, channels='BGR', use_column_width=True)
-        st.session_state['img_save']= img
+#         if not success:
+#             st.error(
+#                 f"{options} NOT working\nCheck {options} properly!!",
+#                 icon="🚨"
+#             )
+#             break
+#         # img1 = cv2.resize(img, (0, 0), fx=0.1, fy=0.1)
+#         # img = cv2.resize(img, (0, 0), fx=0.7, fy=0.7)
+#         # current_no_class =[]
+#         # Get predict
+#         img,listIdPred = get_predict(
+#                 img, model, confidence, color_pick_list, draw_thick)
+#         # img = GetPredict(img)
+#         # FPS
+#         c_time = time.time()
+#         fps = 1 / (c_time - p_time)
+#         p_time = c_time
+#         # cv2.putText(img,f"FPS : {int(fps)}", (20,30),cv2.FONT_HERSHEY_PLAIN,2,(0,255,0),2)
+#         FRAME_WINDOW.image(img, channels='BGR', use_column_width=True)
+#         st.session_state['img_save']= img
 
-        # Current number of classes
-        # class_fq = dict(
-        #     Counter(i for sub in current_no_class for i in set(sub)))
-        # class_fq = json.dumps(class_fq, indent=4)
-        # class_fq = json.loads(class_fq)
-        # df_fq = pd.DataFrame(class_fq.items(), columns=['Class', 'Number'])
+#         # Current number of classes
+#         # class_fq = dict(
+#         #     Counter(i for sub in current_no_class for i in set(sub)))
+#         # class_fq = json.dumps(class_fq, indent=4)
+#         # class_fq = json.loads(class_fq)
+#         # df_fq = pd.DataFrame(class_fq.items(), columns=['Class', 'Number'])
         
-        # listIdPred =[0,0,0,0,1]
-        df_result = getDFPredict(listIdPred,food_names,calories)
-        st.session_state['df_result']= df_result
-        st.session_state['listIdPred']= listIdPred
+#         # listIdPred =[0,0,0,0,1]
+#         df_result = getDFPredict(listIdPred,food_names,calories)
+#         st.session_state['df_result']= df_result
+#         st.session_state['listIdPred']= listIdPred
 
-        # Updating Inference results
-        get_system_stat(stframe1, stframe2, fps, df_result)
-    cap.release()
+#         # Updating Inference results
+#         get_system_stat(stframe1, stframe2, fps, df_result)
+#     cap.release()
     
-else:
-    if 'save' in st.session_state:
-        del st.session_state['save']
-    if  'img_save' in st.session_state:
-        del st.session_state['img_save']
-    if  'df_save' in st.session_state:
-        del st.session_state['df_result']
-    if  'listIdPred' in st.session_state:
-        del st.session_state['listIdPred']
+# else:
+#     if 'save' in st.session_state:
+#         del st.session_state['save']
+#     if  'img_save' in st.session_state:
+#         del st.session_state['img_save']
+#     if  'df_save' in st.session_state:
+#         del st.session_state['df_result']
+#     if  'listIdPred' in st.session_state:
+#         del st.session_state['listIdPred']
 
