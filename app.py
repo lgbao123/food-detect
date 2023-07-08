@@ -86,8 +86,8 @@ if model_type == 'YOLOv7':
 
     # Confidence
     confidence = st.sidebar.slider(
-        'Detection Confidence', min_value=0.0, max_value=1.0, value=0.25)
-
+        'Detection Confidence', min_value=0.0, max_value=1.0, value=0.35)
+    
     # Draw thickness
     draw_thick = st.sidebar.slider(
         'Draw Thickness:', min_value=1,
@@ -163,7 +163,7 @@ if model_type == 'YOLOv7':
             # return frame
             return av.VideoFrame.from_ndarray(img, format="bgr24")
         account_sid = 'ACde6e622ff59ca01ca77864061fb5c7a6'
-        auth_token = 'c0289f72f2bc77fa3f77abb8893eb409'
+        auth_token = 'f592e4e7783d4194a9cd418684f0518e'
         client = Client(account_sid, auth_token)
 
         token = client.tokens.create()
@@ -181,36 +181,36 @@ if model_type == 'YOLOv7':
 # window = st.empty()
 
 
-# if ctx != None:
-#     # print('323')
-#     save_btn = st.button('save')
+if ctx != None:
+    # print('323')
+    save_btn = st.button('save')
 
-#     stframe1 = st.empty()
-#     stframe2 = st.empty()
-#     FRAME_WINDOW.empty()
-#     # if(save_btn):
-#     #     st.session_state['save'] =True
-#     # Save img
+    stframe1 = st.empty()
+    stframe2 = st.empty()
+    FRAME_WINDOW.empty()
+    # if(save_btn):
+    #     st.session_state['save'] =True
+    # Save img
 
-#     while ctx.state.playing :
+    while ctx.state.playing :
 
-#         with lock:
-#             kq  =img_container["img"]
+        with lock:
+            kq  =img_container["img"]
                 
             
-#         if kq is None:
-#             continue
+        if kq is None:
+            continue
   
-#         # FRAME_WINDOW.image(kq[0],channels='BGR')
+        # FRAME_WINDOW.image(kq[0],channels='BGR')
 
-#         get_system_stat(False, stframe2, False, kq[1])
-#         if(save_btn):
-#             df_nf=df_nf[df_nf["id"].apply(lambda x : x in kq[2])]
-#             get_save_stat(save1,save2,save3,
-#                       kq[0],
-#                       kq[1],
-#                       df_nf)
-#         save_btn = False
+        get_system_stat(False, stframe2, False, kq[1])
+        if(save_btn):
+            df_nf=df_nf[df_nf["id"].apply(lambda x : x in kq[2])]
+            get_save_stat(save1,save2,save3,
+                      kq[0],
+                      kq[1],
+                      df_nf)
+        save_btn = False
            
         
 # p_time = 0
