@@ -154,7 +154,7 @@ if model_type == 'YOLOv7':
             # return frame
             return av.VideoFrame.from_ndarray(img, format="bgr24")
         account_sid = 'ACde6e622ff59ca01ca77864061fb5c7a6'
-        auth_token = '5947621c1c5cd3e90c6b6216702826a1'
+        auth_token = '729b16a9df22604c15f1d54fb8cec400'
         client = Client(account_sid, auth_token)
 
         token = client.tokens.create()
