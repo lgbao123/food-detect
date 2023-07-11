@@ -4,12 +4,11 @@ import torch
 from utils.hubconf import  loadModel
 import numpy as np
 
-import time
 
-from model_utils import get_save_stat,showInfo,getDFPredict , get_system_stat,get_predict,loadFood
+
+from model_utils import get_save_stat,showInfo,getDFPredict , get_current_detect,get_predict,loadFood
 from numpy import random
-import plotly.express as px
-import pandas as pd
+
 
 import os 
 import gdown
@@ -22,11 +21,13 @@ lock = threading.Lock()
 img_container = {"img": None}
 
 st.sidebar.title('Settings')
+# download model
 path_model_file='./last.pt'
 if not os.path.isfile(path_model_file):
     url = 'https://drive.google.com/file/d/1Vp0oBDJl1OAF3W70rHzPw1NAfB8M2l8Z/view?usp=drive_link'
     output_path = 'last.pt'
     gdown.download(url, output_path, quiet=False,fuzzy=True)
+#load fact food
 food_names,calories,df_nf=loadFood()
 
 # Choose the model
@@ -45,8 +46,8 @@ sample_img = cv2.imread('./assets/logo.jpg')
 FRAME_WINDOW = st.image(sample_img, channels='BGR')
 
 
-cap = None
-vid =None
+# cap = None
+# vid =None
 if model_type == 'Info':
     FRAME_WINDOW.empty()
     showInfo()
@@ -91,7 +92,7 @@ if model_type == 'YOLOv7':
     # Draw thickness
     draw_thick = st.sidebar.slider(
         'Draw Thickness:', min_value=1,
-        max_value=20, value=2
+        max_value=20, value=3
     )
 
 
@@ -115,26 +116,16 @@ if model_type == 'YOLOv7':
             file_bytes = np.asarray(
                 bytearray(upload_img_file.read()), dtype=np.uint8)
             img = cv2.imdecode(file_bytes, 1)
-            FRAME_WINDOW.image(img, channels='BGR')
+            # FRAME_WINDOW.image(img, channels='BGR')
             # Get predict
             img,listIdPred = get_predict(
                 img, model, confidence, color_pick_list, draw_thick)
-            FRAME_WINDOW.image(img, channels='BGR')
+            # FRAME_WINDOW.image(img, channels='BGR')
 
             # listIdPred =[0,0,0,0,1]
             df_result = getDFPredict(listIdPred,food_names,calories)
             df_nf=df_nf[df_nf["id"].apply(lambda x : x in listIdPred)]
-            get_save_stat(False,save2,save3,False,df_result,df_nf)
-    # Video
-    # if options == 'Video':
-    #     upload_video_file = st.sidebar.file_uploader(
-    #         'Upload Video', type=['mp4', 'avi', 'mkv'])
-    #     if upload_video_file is not None:
-    #         pred = st.checkbox(f'Predict Using YOLOv7')
-
-    #         tfile = tempfile.NamedTemporaryFile(delete=False)
-    #         tfile.write(upload_video_file.read())
-    #         cap = cv2.VideoCapture(tfile.name)
+            get_save_stat(FRAME_WINDOW,save2,save3,img,df_result,df_nf)
 
     # Web-cam
     if options == 'Webcam':
@@ -153,8 +144,8 @@ if model_type == 'YOLOv7':
                 img,listIdPred = get_predict(
                     img, model, confidence, color_pick_list, draw_thick) 
                 df_result = getDFPredict(listIdPred,food_names,calories)
-                st.session_state['df_result']= df_result
-                st.session_state['listIdPred']= listIdPred
+                # st.session_state['df_result']= df_result
+                # st.session_state['listIdPred']= listIdPred
                 kq.append(img)   
                 kq.append(df_result)   
                 kq.append(listIdPred)   
@@ -163,7 +154,7 @@ if model_type == 'YOLOv7':
             # return frame
             return av.VideoFrame.from_ndarray(img, format="bgr24")
         account_sid = 'ACde6e622ff59ca01ca77864061fb5c7a6'
-        auth_token = 'f592e4e7783d4194a9cd418684f0518e'
+        auth_token = '5947621c1c5cd3e90c6b6216702826a1'
         client = Client(account_sid, auth_token)
 
         token = client.tokens.create()
@@ -178,7 +169,7 @@ if model_type == 'YOLOv7':
 
 
             
-# window = st.empty()
+
 
 
 if ctx != None:
@@ -186,7 +177,7 @@ if ctx != None:
     save_btn = st.button('save')
 
     stframe1 = st.empty()
-    stframe2 = st.empty()
+    # stframe2 = st.empty()
     FRAME_WINDOW.empty()
     # if(save_btn):
     #     st.session_state['save'] =True
@@ -203,7 +194,7 @@ if ctx != None:
   
         # FRAME_WINDOW.image(kq[0],channels='BGR')
 
-        get_system_stat(False, stframe2, False, kq[1])
+        get_current_detect(stframe1, kq[1])
         if(save_btn):
             df_nf=df_nf[df_nf["id"].apply(lambda x : x in kq[2])]
             get_save_stat(save1,save2,save3,
